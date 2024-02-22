@@ -1,0 +1,39 @@
+.informacion {
+    background-color: #FF4331;
+}
+
+.semejanzas {
+    background-color: #04BB03;
+}
+
+.vocabulario {
+    background-color: #19A9B6;
+}
+
+.comprension {
+    background-color: #F67227;
+}
+
+.dibujos {
+    background-color: rgba(189, 49, 255, 0.75);
+}
+
+.nombres {
+    background-color: rgba(49, 70, 255, 0.75);
+}
+
+.matrices {
+    background-color: #A1BB03;
+}
+
+.conceptos {
+    background-color: #19A9B6;
+}
+
+.reconocimiento {
+    background-color: #FF4331;
+}
+
+.busqueda {
+    background-color: #F67227;
+}

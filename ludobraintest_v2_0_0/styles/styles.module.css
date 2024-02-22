@@ -1,0 +1,781 @@
+@media (min-width: 0px) and (max-width: 768px) {
+    /* Para pantallas sm */
+    .manage_icon {
+        width: 4vw;
+    }
+
+    .epn_logo {
+        height: 15vw;
+    }
+
+    .ludolab_logo {
+        height: 15vw;
+    }
+
+    .user_logo {
+        width: 7.5vw;
+    }
+
+    .password_logo {
+        width: 7.5vw;
+    }
+
+    .echo_logo {
+        height: 40vw;
+    }
+
+    .echo_logo_ib {
+        height: 15vw;
+    }
+
+    .instruction_text {
+        font-weight: bolder;
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .label {
+        font-size: 2.7vw;
+    }
+
+    .input_text {
+        font-size: 2.2vw;
+    }
+
+    .btn_text {
+        font-size: 2.7vw;
+    }
+
+    .btns_div {
+        padding-top: 5%;
+    }
+
+    .child_data {
+        font-size: 2.5vw;
+        text-align: left;
+    }
+
+    .card_test_text {
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    /* Para pantallas md */
+    .manage_icon {
+        width: 3.5vw;
+    }
+
+    .epn_logo {
+        height: 13vw;
+    }
+
+    .ludolab_logo {
+        height: 13vw;
+    }
+
+    .user_logo {
+        width: 5.5vw;
+    }
+
+    .password_logo {
+        width: 5.5vw;
+    }
+
+    .echo_logo {
+        height: 40vw;
+    }
+
+    .echo_logo_ib {
+        height: 14vw;
+    }
+
+    .instruction_text {
+        font-weight: bolder;
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .label {
+        font-size: 2.2vw;
+    }
+
+    .input_text {
+        font-size: 2vw;
+    }
+
+    .btn_text {
+        font-size: 2vw;
+    }
+
+    .btns_div {
+        padding-top: 5%;
+    }
+
+    .child_data {
+        font-size: 2.2vw;
+        text-align: center;
+    }
+
+    .card_test_text {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    /* Para pantallas lg */
+    .manage_icon {
+        width: 3vw;
+    }
+
+    .epn_logo {
+        height: 12vw;
+    }
+
+    .ludolab_logo {
+        height: 12vw;
+    }
+
+    .user_logo {
+        width: 4.5vw;
+    }
+
+    .password_logo {
+        width: 4.5vw;
+    }
+
+    .echo_logo {
+        height: 35vw;
+    }
+
+    .echo_logo_ib {
+        height: 12vw;
+    }
+
+    .instruction_text {
+        font-weight: bolder;
+        font-size: 2.5vw;
+        text-align: center;
+    }
+
+    .label {
+        font-size: 2vw;
+    }
+
+    .input_text {
+        font-size: 1.8vw;
+    }
+
+    .btn_text {
+        font-size: 1.8vw;
+    }
+
+    .btns_div {
+        padding-top: 3.5%;
+    }
+
+    .child_data {
+        font-size: 1.8vw;
+        text-align: center;
+    }
+
+    .card_test_text {
+        font-size: 1.7vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Para pantallas xl */
+    .manage_icon {
+        width: 2.5vw;
+        height: auto;
+    }
+
+    .epn_logo {
+        height: 10vw;
+        width: auto;
+    }
+
+    .ludolab_logo {
+        height: 10vw;
+        width: auto;
+    }
+
+    .user_logo {
+        width: 4.5vw;
+    }
+
+    .password_logo {
+        width: 4.5vw;
+    }
+
+    .echo_logo {
+        height: 30vw;
+        width: auto;
+    }
+
+    .echo_logo_ib {
+        height: 8vw;
+        width: auto;
+    }
+
+    .echo_logo_qb {
+        height: 8vw;
+        width: 100%;
+    }
+
+    .instruction_text {
+        font-weight: bolder;
+        font-size: 1.8vw;
+        text-align: center;
+    }
+
+    .label {
+        font-size: 1.8vw;
+    }
+
+    .input_text {
+        font-size: 1.6vw;
+    }
+
+    .btn_text {
+        font-size: 1.6vw;
+    }
+
+    .btns_div {
+        padding-top: 1.5%;
+    }
+
+    .child_data {
+        font-size: 1.8vw;
+        text-align: center;
+    }
+
+    .card_test_text {
+        font-size: 1.4vw;
+    }
+
+    .information_text {
+        font-size: 1.2vw;
+        text-align: justify;
+    }
+
+    .information_text_vocabulario {
+        font-size: 1.2vw;
+        text-align: center;
+    }
+
+    .imagen_dibujos {
+        width: 100%;
+        height: 100%;
+    }
+
+    .modules_instruction_text {
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .test_info {
+        font-size: 1.5vw;
+        text-align: center;
+    }
+
+    .section_text {
+        font-size: 1.7vw;
+        text-align: center;
+    }
+
+    .semejanza_instruction_text {
+        font-size: 1.19vw;
+        text-align: center;
+    }
+
+    .sample_img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .dibujos_text{
+        font-size: 1.25vw;
+        text-align: center;
+    }
+
+    .instruction_matrix_text{
+        font-size: 1.25vw;
+        text-align: center;
+    }
+
+    .middle_text{
+        text-align: center;
+    }
+
+    .logo_credits {
+        height: 8.5vw;
+        width: auto;
+    }
+
+    .answer_img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.input_sky_blue {
+    background-color: #E8F0FE;
+}
+
+.input_yellow {
+    background-color: rgba(246, 218, 39, 0.6);
+    color: #000000;
+}
+
+.input_red {
+    background-color: rgba(255, 67, 49, 0.6);
+    color: #000000;
+}
+
+.input_green {
+    background-color: rgba(4, 187, 3, 0.6);
+    color: #000000;
+
+}
+
+.label_red {
+    color: #FF4331;
+    text-align: center;
+}
+
+.label_yellow {
+    color: #F6DA27;
+    text-align: center;
+}
+
+.label_green {
+    color: #04BB03;
+    text-align: center;
+}
+
+.label_orange {
+    color: #F67227;
+    text-align: center;
+}
+
+.label_olive {
+    color: #A1BB03;
+    text-align: center;
+}
+
+.label_purple {
+    color: #BD31FF;
+    text-align: center;
+}
+
+.label_electric_blue {
+    color: rgba(49, 102, 255, 0.75);
+    text-align: center;
+}
+
+.label_blue {
+    color: #19A9B6;
+    text-align: center;
+}
+
+.btn_test {
+    background-color: #19A9B6;
+    color: #000000;
+    opacity: 90%;
+}
+
+.btn_creacion {
+    background-color: #04BB03;
+    color: #000000;
+    opacity: 90%;
+}
+
+.btn_resultados {
+    background-color: #FF4331;
+    color: #000000;
+    opacity: 90%;
+}
+
+.btn_registro {
+    background-color: #F6DA27;
+    color: #000000;
+    opacity: 90%;
+}
+
+.card_body_green {
+    background-color: rgba(4, 187, 3, 0.6);
+    color: #000000;
+}
+
+.card_body_yellow {
+    background-color: rgba(246, 218, 39, 0.6);
+    color: #000000;
+}
+
+.card_body_red {
+    background-color: rgba(255, 67, 49, 0.6);
+    color: #000000;
+}
+
+.card_body_blue {
+    background-color: rgba(25, 169, 182, 0.6);
+    color: #000000;
+}
+
+.selected_child_card {
+    background-color: rgb(25, 169, 182);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #000000;
+}
+
+.selected_test_card {
+    background-color: rgb(25, 169, 182);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #000000;
+}
+
+.selected_answer_card {
+    background-color: rgb(25, 169, 182);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10% 10%;
+    width: 100%;
+    box-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.3s ease-in-out;
+}
+
+.selected_test_card_results {
+    background-color: rgb(255, 67, 49);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #000000;
+}
+
+.selected_answer_card_recon {
+    background-color: rgb(255, 67, 49);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10% 10%;
+    width: 100%;
+    box-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.3s ease-in-out;
+}
+
+.overflow_container {
+    overflow: auto;
+    height: 85%;
+}
+
+.overflow_container_test {
+    overflow: auto;
+    height: 67%;
+}
+
+.overflow_container_test_results {
+    overflow-y: auto;
+    height: 80%;
+}
+
+.overflow_container_test_results_2 {
+    overflow-y: auto;
+    height: 94%;
+}
+
+.overflow_container_children {
+    overflow-y: auto;
+    height: 305px;
+}
+
+.overflow_container_questions {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 370px;
+}
+
+.overflow_container_answers {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 125px;
+}
+
+.overflow_col {
+    height: 335px;
+}
+
+.overflow_col_results {
+    height: 400px;
+}
+
+.overflow_container_test2 {
+    overflow-y: auto;
+    height: 300px;
+}
+
+.overflow_container_samples {
+    overflow-y: auto;
+    height: 200px;
+}
+
+.overflow_container_samples_2 {
+    overflow-y: hidden;
+    height: 133px;
+}
+
+.overflow_container_answers_informacion {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 175px;
+}
+
+.overflow_container_answers_semejanzas {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 160px;
+}
+
+.overflow_container_answers_busqueda {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 133px;
+}
+
+.answer_btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10% 10%;
+    width: 100%;
+    box-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.3s ease-out;
+}
+
+.answer_btn:hover {
+    background-color: rgba(255, 67, 49, 0.75);
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+
+.answer_btn_semejanzas {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10% 10%;
+    width: 100%;
+    box-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.3s ease-out;
+}
+
+.answer_btn_semejanzas:hover {
+    background-color: rgba(4, 187, 3, 0.75);
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+
+.answer_btn_comprension {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10% 10%;
+    width: 100%;
+    box-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.3s ease-out;
+}
+
+.answer_btn_comprension:hover {
+    background-color: rgba(246, 114, 39, 0.75);
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+
+.answer_btn_dibujos {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10% 10%;
+    width: 100%;
+    box-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.3s ease-out;
+}
+
+.answer_btn_dibujos:hover {
+    background-color: rgba(189, 49, 255, 0.75);
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+
+.answer_btn_matrices {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10% 10%;
+    width: 100%;
+    box-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.3s ease-out;
+}
+
+.answer_btn_matrices:hover {
+    background-color: rgba(161, 187, 3, 0.75);
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+
+.answer_btn_conceptos {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10% 10%;
+    width: 100%;
+    box-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.3s ease-out;
+}
+
+.answer_btn_conceptos:hover {
+    background-color: rgba(25, 169, 182, 0.75);
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+}
+
+.sample_btn_busqueda {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 5% 5%;
+    width: 50%;
+    box-shadow: black 0.1em 0.1em 0.2em;
+    transition: all 0.3s ease-out;
+}
+
+.incorrect_btn {
+    background-color: rgba(255, 67, 49, 0.75);
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10%;
+    width: 100%;
+    box-shadow: black 0.05em 0.05em 0.1em;
+    transition: all 0.3s ease-out;
+}
+
+.incorrect_btn:hover {
+    background-color: rgb(255, 67, 49);
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.correct_btn {
+    background-color: rgba(4, 187, 3, 0.75);
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10%;
+    width: 100%;
+    box-shadow: black 0.05em 0.05em 0.1em;
+    transition: all 0.3s ease-out;
+}
+
+.correct_btn:hover {
+    background-color: rgb(4, 187, 3);
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.add_btn {
+    background-color: #4671C6;
+    color: #ffffff;
+    border: 1px solid #4671C6;
+    border-radius: 10px;
+    box-shadow: black 0.05em 0.05em 0.1em;
+    transition: all 0.3s ease-out;
+}
+
+.add_btn:hover {
+    background-color: #A4C9FF;
+    color: #000000;
+    border: 1px solid #A4C9FF;
+    transition: all 0.3s ease-out;
+}
+
+.minus_btn {
+    background-color: #f12727;
+    color: #ffffff;
+    border: 1px solid #f12727;
+    border-radius: 10px;
+    box-shadow: black 0.05em 0.05em 0.1em;
+    transition: all 0.3s ease-out;
+}
+
+.minus_btn:hover {
+    background-color: #F9A7A7;
+    color: #000000;
+    border: 1px solid #F9A7A7;
+    transition: all 0.3s ease-out;
+}
+
+.plus_btn {
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: black 0.05em 0.05em 0.1em;
+    transition: all 0.3s ease-out;
+}
+
+.plus_btn:hover {
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+.btn_sticky {
+    position: sticky;
+    bottom: 0;
+}
+
+.cart_answer_test {
+    overflow-wrap: break-word;
+    text-align: justify;
+    width: 100% !important;
+}
+
+.back {
+    text-decoration: none;
+    color: black;
+}
+
+.div_btn {
+    width: 35%;
+    align-content: center;
+    text-align: center;
+}
+
+.welcome_text {
+    text-align: center;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.4em;
+    font-weight: bold;
+}
+
+.megafono_image {
+    width: 7%;
+}
+
+.nombres_text {
+    text-align: center;
+}
+
+.bg_robot_image {
+    background-image: url('/images/fondo_login2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

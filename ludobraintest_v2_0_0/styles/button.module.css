@@ -1,0 +1,307 @@
+.btn_yellow {
+    background-color: rgba(246, 218, 39, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_yellow:hover {
+    background-color: rgb(246, 218, 39);
+    color: white;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_green {
+    background-color: rgba(4, 187, 3, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_green:hover {
+    background-color: rgb(4, 187, 3);
+    color: white;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_blue {
+    background-color: rgba(25, 169, 182, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_blue:hover {
+    background-color: rgb(25, 169, 182);
+    color: white;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_red {
+    background-color: rgba(255, 67, 49, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_red:hover {
+    background-color: rgb(255, 67, 49);
+    color: white;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_orange {
+    background-color: rgba(246, 114, 39, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_orange:hover {
+    background-color: rgb(246, 114, 39);
+    color: white;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_purple {
+    background-color: rgba(189, 49, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_purple:hover {
+    background-color: rgb(189, 49, 255, 0.75);
+    color: white;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_electric_blue {
+    background-color: rgba(49, 70, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_electric_blue:hover {
+    background-color: rgb(49, 70, 255, 0.75);
+    color: white;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_olive {
+    background-color: rgba(161, 187, 3, 0.75);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_olive:hover {
+    background-color: rgb(161, 187, 3);
+    color: white;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_black {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_black:hover {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_white {
+    background-color: rgb(154, 154, 154);
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_white:hover {
+    background-color: rgb(77, 77, 77);
+    color: #ffffff;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_back_arrow {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_back_arrow:hover {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_speak {
+    background-color: rgba(25, 169, 182, 0.75);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_speak:hover {
+    background-color: rgba(25, 169, 182, 0);
+    color: white;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_silence {
+    background-color: rgba(255, 67, 49, 0.75);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_silence:hover {
+    background-color: rgba(255, 67, 49, 0);
+    color: white;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+/*Estilos para los botones de la lista de secciones*/
+.btn_informacion {
+    background-color: rgba(255, 67, 49, 0.75);
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_informacion:hover {
+    background-color: rgba(255, 67, 49);
+    font-weight: bolder;
+    color: white;
+    box-shadow: black 0.075em 0.075em 0.125em;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn_semejanza {
+    background-color: rgba(4, 187, 3, 0.75);
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_semejanza:hover {
+    background-color: rgba(4, 187, 3);
+    font-weight: bolder;
+    color: white;
+    box-shadow: black 0.075em 0.075em 0.125em;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_vocabulario {
+    background-color: rgba(25, 169, 182, 0.75);
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_vocabulario:hover {
+    background-color: rgba(25, 169, 182);
+    font-weight: bolder;
+    color: white;
+    box-shadow: black 0.075em 0.075em 0.125em;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_comprension {
+    background-color: rgba(246, 114, 39, 0.75);
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_comprension:hover {
+    background-color: rgba(246, 114, 39);
+    font-weight: bolder;
+    color: white;
+    box-shadow: black 0.075em 0.075em 0.125em;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_dibujos {
+    background-color: rgba(189, 49, 255, 0.75);
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_dibujos:hover {
+    background-color: rgba(189, 49, 255);
+    font-weight: bolder;
+    color: white;
+    box-shadow: black 0.075em 0.075em 0.125em;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_nombres {
+    background-color: rgba(49, 70, 255, 0.75);
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_nombres:hover {
+    background-color: rgba(49, 70, 255);
+    font-weight: bolder;
+    color: white;
+    box-shadow: black 0.075em 0.075em 0.125em;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_matrices {
+    background-color: rgba(161, 187, 3, 0.75);
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_matrices:hover {
+    background-color: rgba(161, 187, 3);
+    font-weight: bolder;
+    color: white;
+    box-shadow: black 0.075em 0.075em 0.125em;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_conceptos {
+    background-color: rgba(25, 169, 182, 0.75);
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_conceptos:hover {
+    background-color: rgba(25, 169, 182);
+    font-weight: bolder;
+    color: white;
+    box-shadow: black 0.075em 0.075em 0.125em;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_reconocimiento {
+    background-color: rgba(255, 67, 49, 0.75);
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_reconocimiento:hover {
+    background-color: rgba(255, 67, 49);
+    font-weight: bolder;
+    color: white;
+    box-shadow: black 0.075em 0.075em 0.125em;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_busqueda {
+    background-color: rgba(246, 114, 39, 0.75);
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_busqueda:hover {
+    background-color: rgba(246, 114, 39);
+    font-weight: bolder;
+    color: white;
+    box-shadow: black 0.075em 0.075em 0.125em;
+    text-shadow: black 0.075em 0.075em 0.125em;
+    transition: all 0.3s ease-in-out;
+}
