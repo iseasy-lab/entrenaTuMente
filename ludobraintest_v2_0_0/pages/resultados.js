@@ -11,9 +11,12 @@ import Swal from "sweetalert2";
 import UseSpeechSynthesis from "@/effects/useSpeechSynthesis";
 import useVoiceReader from "@/effects/useVoiceReader";
 import Image from "next/image";
+import configurationServices from "@/public/config/configurationServices";
+import configurationPort from "@/public/config/configurationPort";
 
 export default function Resultados() {
     const router = useRouter();
+    const basePath = configurationServices.url + configurationPort.port;
     let section;
     const {speak, speaking} = UseSpeechSynthesis();
     const [isSpeaking, setIsSpeaking] = useState(false);
@@ -69,7 +72,7 @@ export default function Resultados() {
                 id_test: idTest,
             },
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getScoreTable"
+            url: `${basePath}/getScoreTable`
         }).then((res) => {
             console.log(res.data);
             setNoResults(false);
@@ -111,7 +114,7 @@ export default function Resultados() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getSections"
+            url: `${basePath}/getSections`
         }).then((res) => {
             setSections(res.data);
         }).catch((err) => {
@@ -122,7 +125,7 @@ export default function Resultados() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getInformacionTests"
+            url: `${basePath}/getInformacionTests`
         }).then((res) => {
             setInformacionTests(res.data);
             if (res.data.length !== 0) {
@@ -136,7 +139,7 @@ export default function Resultados() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getSemejanzasTests"
+            url: `${basePath}/getSemejanzasTests`
         }).then((res) => {
             setSemejanzasTests(res.data);
             if (res.data.length !== 0) {
@@ -150,7 +153,7 @@ export default function Resultados() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getVocabularioTests"
+            url: `${basePath}/getVocabularioTests`
         }).then((res) => {
             setVocabularioTests(res.data);
             if (res.data.length !== 0) {
@@ -164,7 +167,7 @@ export default function Resultados() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getComprensionTests"
+            url: `${basePath}/getComprensionTests`
         }).then((res) => {
             setComprensionTests(res.data);
             if (res.data.length !== 0) {
@@ -178,7 +181,7 @@ export default function Resultados() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getDibujosTests"
+            url: `${basePath}/getDibujosTests`
         }).then((res) => {
             setDibujosTests(res.data);
             if (res.data.length !== 0) {
@@ -192,7 +195,7 @@ export default function Resultados() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getNombresTests"
+            url: `${basePath}/getNombresTests`
         }).then((res) => {
             setNombresTests(res.data);
             if (res.data.length !== 0) {
@@ -206,7 +209,7 @@ export default function Resultados() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getMatricesTests"
+            url: `${basePath}/getMatricesTests`
         }).then((res) => {
             setMatricesTests(res.data);
             if (res.data.length !== 0) {
@@ -220,7 +223,7 @@ export default function Resultados() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getConceptosTests"
+            url: `${basePath}/getConceptosTests`
         }).then((res) => {
             setConceptosTests(res.data);
             if (res.data.length !== 0) {
@@ -234,7 +237,7 @@ export default function Resultados() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getReconocimientoTests"
+            url: `${basePath}/getReconocimientoTests`
         }).then((res) => {
             setReconocimientoTests(res.data);
             if (res.data.length !== 0) {
@@ -248,7 +251,7 @@ export default function Resultados() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getBusquedaTests"
+            url: `${basePath}/getBusquedaTests`
         }).then((res) => {
             setBusquedaTests(res.data);
             if (res.data.length !== 0) {

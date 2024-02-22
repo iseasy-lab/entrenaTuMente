@@ -1,4 +1,4 @@
-import UpperBar from "@/components/UpperBar";
+    import UpperBar from "@/components/UpperBar";
 import InstructionBar from "@/components/InstructionBar";
 import navstyles from "@/styles/navstyles.module.css";
 import styles from "@/styles/styles.module.css";
@@ -11,9 +11,12 @@ import Swal from "sweetalert2";
 import UseSpeechSynthesis from "@/effects/useSpeechSynthesis";
 import useVoiceReader from "@/effects/useVoiceReader";
 import Image from "next/image";
+import configurationServices from "@/public/config/configurationServices";
+import configurationPort from "@/public/config/configurationPort";
 
 export default function ReadNinio() {
     const router = useRouter();
+    const basePath = configurationServices.url + configurationPort.port;
     const { speak, speaking } = UseSpeechSynthesis();
     /*------------------- ESTADOS -------------------*/
     const [children, setChildren] = useState([]);
@@ -31,7 +34,7 @@ export default function ReadNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getChildren"
+            url: basePath + "/getChildren"
         }).then((res) => {
             if (res.data) {
                 setChildren(res.data); // Establece el estado con los resultados
@@ -60,7 +63,7 @@ export default function ReadNinio() {
                         id_ninio: idNinio,
                     },
                     withCredentials: true,
-                    url: "http://poliquizzes.com:3001/deleteChild"
+                    url: basePath + "/deleteChild"
                 }).then((res) => {
                     console.log(res);
                     if (res.data.message === 'Niño eliminado exitosamente') {
@@ -96,15 +99,15 @@ export default function ReadNinio() {
     }
     const goActualizarNinio = (idNinio) => {
         sessionStorage.setItem('id_ninio_update', idNinio);
-        router.push('/update/updateNinio').then(r => console.log(r));
+        router.push('/update/updateNinio').then(r => r);
         shutUp();
     }
     const goCreateNinio = () => {
-        router.push('/create/createNinio').then(r => console.log(r));
+        router.push('/create/createNinio').then(r => r);
         shutUp();
     }
     const confirmGetBack = () => {
-        router.push('/modulos').then(r => console.log(r));
+        router.push('/modulos').then(r => r);
         shutUp();
     }
     const showInstructions = () => {

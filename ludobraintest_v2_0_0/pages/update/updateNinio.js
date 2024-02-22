@@ -8,9 +8,12 @@ import styles from "@/styles/styles.module.css";
 import Button from "@/components/Button";
 import button from "@/styles/button.module.css";
 import Swal from "sweetalert2";
+import configurationServices from "@/public/config/configurationServices";
+import configurationPort from "@/public/config/configurationPort";
 
 export default function UpdateNinio() {
     const router = useRouter();
+    const basePath = configurationServices.url + configurationPort.port;
     let id_ninio;
     /*------------------- ESTADOS -------------------*/
     const [idNinio, setIdNinio] = useState('');
@@ -38,7 +41,7 @@ export default function UpdateNinio() {
                 id_ninio: id_ninio,
             },
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getChildrenById"
+            url: basePath + "/getChildrenById"
         }).then(res => {
             setIdNinio(res.data[0].id_ninio);
             setRegisterUpdateName(res.data[0].nombre);
@@ -90,7 +93,7 @@ export default function UpdateNinio() {
                     edad: registerUpdateAge,
                 },
                 withCredentials: true,
-                url: "http://poliquizzes.com:3001/updateChildren"
+                url: basePath + "/updateChildren"
             }).then(res => {
                 console.log(res);
                 if (res.data.message === 'Niño actualizado exitosamente') {

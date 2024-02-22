@@ -6,9 +6,13 @@ import {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 import Button from "@/components/Button";
 import SweetAlert from "sweetalert2";
+import configurationServices from "@/public/config/configurationServices";
+import configurationPort from "@/public/config/configurationPort";
 
 export default function UpperBar({color, questionType, silenceVoice}) {
     const router = useRouter();
+    const getUserPath = configurationServices.url + configurationPort.port +'/getUser';
+    const logoutPath = configurationServices.url + configurationPort.port +'/logout';
     /*------------------- ESTADOS -------------------*/
     const [userId, setUserId] = useState('');
     const [username, setUsername] = useState('');
@@ -22,7 +26,7 @@ export default function UpperBar({color, questionType, silenceVoice}) {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getUser"
+            url: getUserPath
         }).then(res => {
             setUserId(res.data.id);
             setUsername(res.data.username);
@@ -46,11 +50,10 @@ export default function UpperBar({color, questionType, silenceVoice}) {
             if (result.isConfirmed) {
                 axios({
                     method: "post",
-                    url: "http://poliquizzes.com:3001/logout"
+                    url: logoutPath,
                 }).then(res => {
                     if (res.data.message === "Sesión cerrada exitosamente") {
-                        console.log('Sesión cerrada exitosamente');
-                        router.push('/').then(r => console.log(r));
+                        router.push('/').then(r => r);
                         shutUp();
                     } else {
                         SweetAlert.fire({

@@ -11,9 +11,12 @@ import Button from "@/components/Button";
 import UseSpeechSynthesis from "@/effects/useSpeechSynthesis";
 import useVoiceReader from "@/effects/useVoiceReader";
 import Image from "next/image";
+import configurationServices from "@/public/config/configurationServices";
+import configurationPort from "@/public/config/configurationPort";
 
 export default function ReadPreguntaReconocimiento() {
     const router = useRouter();
+    const basePath = configurationServices.url + configurationPort.port;
     let id_test;
     let id_ninio;
     let arregloPreguntas;
@@ -59,7 +62,7 @@ export default function ReadPreguntaReconocimiento() {
                 id_test: id_test,
             },
             withCredentials: true,
-            url: 'http://poliquizzes.com:3001/getTestNameById',
+            url: basePath + '/getTestNameById',
         }).then(res => {
             console.log("Nombre del test", res.data);
             setNombreTest(res.data[0].nombre_test);
@@ -84,7 +87,7 @@ export default function ReadPreguntaReconocimiento() {
                 id_ninio: id_ninio,
             },
             withCredentials: true,
-            url: 'http://poliquizzes.com:3001/getQuestionsbyTestId',
+            url: basePath + '/getQuestionsbyTestId',
         }).then(res => {
             setQuestions(res.data);
             arregloPreguntas = res.data;
@@ -105,7 +108,7 @@ export default function ReadPreguntaReconocimiento() {
                 id: id_question,
             },
             withCredentials: true,
-            url: 'http://poliquizzes.com:3001/getAnswersbyQuestionId',
+            url: basePath + '/getAnswersbyQuestionId',
         }).then(res => {
             setAnswers(res.data);
             showQuestion()
@@ -120,7 +123,7 @@ export default function ReadPreguntaReconocimiento() {
                 id: id_question,
             },
             withCredentials: true,
-            url: 'http://poliquizzes.com:3001/getSamplesByQuestionId',
+            url: basePath + '/getSamplesByQuestionId',
         }).then(res => {
             console.log(res.data);
             setSamples(res.data);

@@ -21,15 +21,15 @@ export default function ModulosCreacion() {
     useVoiceReader(text, isSpeaking);
     /*------------------- FUNCIONES -------------------*/
     const goCreateTest = () => {
-        router.push("/read/readTest").then(r => console.log(r));
+        router.push("/read/readTest").then(r => r);
         shutUp();
     }
     const goCreateQuestion = () => {
-        router.push("/read/readPregunta").then(r => console.log(r));
+        router.push("/read/readPregunta").then(r => r);
         shutUp();
     }
     const confirmGetBack = () => {
-        router.push('/modulos').then(r => console.log(r));
+        router.push('/modulos').then(r => r);
         shutUp();
     }
     const hearVoice = () => {

@@ -8,10 +8,13 @@ import axios from "axios";
 import {useRouter} from "next/router";
 import Button from "@/components/Button";
 import Swal from "sweetalert2";
+import configurationServices from "@/public/config/configurationServices";
+import configurationPort from "@/public/config/configurationPort";
 
 export default function CreatePregunta() {
     let dato;
     const router = useRouter();
+    const basePath = configurationServices.url + configurationPort.port;
     let imagenMuestraVocabulario = [];
     let imagenMuestraBusqueda = [];
     let bandera = false;
@@ -1083,7 +1086,7 @@ export default function CreatePregunta() {
             if (!bandera) {
                 // Enviar la solicitud al servidor
                 const response = await axios.post(
-                    "http://poliquizzes.com:3001/uploadQuestion",
+                    basePath + "/uploadQuestion",
                     formData,
                     {
                         headers: {

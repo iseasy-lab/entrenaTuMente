@@ -9,6 +9,8 @@ import axios from "axios";
 import UseSpeechSynthesis from "@/effects/useSpeechSynthesis";
 import useVoiceReader from "@/effects/useVoiceReader";
 import {useEffect, useState} from "react";
+import configurationServices from "@/public/config/configurationServices";
+import configurationPort from "@/public/config/configurationPort";
 
 export default function PuntajeFinal() {
     const router = useRouter();
@@ -16,6 +18,7 @@ export default function PuntajeFinal() {
     let idTest;
     let idNinio;
     const { speak, speaking } = UseSpeechSynthesis();
+    const basePath = configurationServices.url + configurationPort.port;
     /*------------------- ESTADOS -------------------*/
     const [isSpeaking, setIsSpeaking] = useState(false);
     const [puntuacion, setPuntuacion] = useState(puntaje);
@@ -25,8 +28,6 @@ export default function PuntajeFinal() {
     const text = "¡Felicitaciones! Completaste la Evaluación. Tu puntuación final es " + puntuacion;
     useVoiceReader(text, isSpeaking);
     useEffect(() => {
-        console.log('puntaje', puntaje);
-        console.log('puntuacion', puntuacion);
         if (typeof window !== 'undefined') {
             puntaje = localStorage.getItem('puntaje');
             setPuntuacion(puntaje);
@@ -35,15 +36,11 @@ export default function PuntajeFinal() {
             idNinio = localStorage.getItem('id_ninio');
             setIdNinio(idNinio);
         } else {
-            router.push('/modulos').then(r => console.log(r));
+            router.push('/modulos').then(r => r);
         }
     }, []);
     /*------------------- FUNCIONES -------------------*/
     const finishTest = () => {
-        console.log('idTest', idTest);
-        console.log('idNinio', idNinio);
-        console.log('puntuacion', puntuacion);
-        console.log('puntaje', puntaje);
         axios({
             method: 'post',
             data: {
@@ -52,10 +49,10 @@ export default function PuntajeFinal() {
                 puntaje: puntuacion,
             },
             withCredentials: true,
-            url: 'http://poliquizzes.com:3001/finishTest',
+            url: basePath+'/finishTest',
         }).then(res => {
             console.log(res.data);
-            router.push(`/menuOpcionesTest`).then(r => console.log(r));
+            router.push(`/menuOpcionesTest`).then(r => r);
             shutUp();
         }).catch(err => {
             console.log(err);

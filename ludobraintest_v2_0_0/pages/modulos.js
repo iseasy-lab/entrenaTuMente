@@ -28,19 +28,19 @@ export default function Modulos() {
     useVoiceReader(text, isSpeaking);
     /*------------------- FUNCIONES -------------------*/
     const goTest = () => {
-        router.push("/select/selectNinio").then(r => console.log(r));
+        router.push("/select/selectNinio").then(r => r);
         shutUp();
     }
     const goCreate = () => {
-        router.push("/modulosCreacion").then(r => console.log(r));
+        router.push("/modulosCreacion").then(r => r);
         shutUp();
     }
     const goResults = () => {
-        router.push("/resultados").then(r => console.log(r));
+        router.push("/resultados").then(r => r);
         shutUp();
     }
     const goRegister = () => {
-        router.push("/read/readNinio").then(r => console.log(r));
+        router.push("/read/readNinio").then(r => r);
         shutUp();
     }
     const confirmGetBack = () => {
@@ -55,7 +55,7 @@ export default function Modulos() {
             cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed) {
-                router.push('/').then(r => console.log(r));
+                router.push('/').then(r => r);
                 shutUp();
             }
         }).catch(err => {

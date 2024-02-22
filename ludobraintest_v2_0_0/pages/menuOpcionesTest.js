@@ -10,9 +10,12 @@ import Button from "@/components/Button";
 import Swal from "sweetalert2";
 import useVoiceReader from "@/effects/useVoiceReader";
 import UseSpeechSynthesis from "@/effects/useSpeechSynthesis";
+import configurationServices from "@/public/config/configurationServices";
+import configurationPort from "@/public/config/configurationPort";
 
 export default function MenuOpcionesTest() {
     const router = useRouter();
+    const basePath = configurationServices.url + configurationPort.port;
     let id;
     let id_t_n;
     let id_test;
@@ -49,7 +52,7 @@ export default function MenuOpcionesTest() {
             id_test = localStorage.getItem('id_test');
             setIdTest(id_test);
         } else {
-            router.push('/modulos').then(r => console.log(r));
+            router.push('/modulos').then(r => r);
         }
     }, []);
     /*------------------- FUNCIONES -------------------*/
@@ -60,14 +63,14 @@ export default function MenuOpcionesTest() {
                 id_test: id_t_n,
             },
             withCredentials: true,
-            url: `http://poliquizzes.com:3001/getNinioTestById`,
+            url: basePath + '/getNinioTestById',
         }).then((res) => {
             console.log(res);
             setTest(res.data[0]);
             nombre_seccion = res.data[0].nombre_seccion;
             setNombreSeccion(res.data[0].nombre_seccion);
             localStorage.setItem('id_ninio', res.data[0].id_ninio);
-            generateColor().then(r => console.log(r));
+            generateColor().then(r => r);
         }).catch((err) => {
             console.log(err);
         })
@@ -75,11 +78,11 @@ export default function MenuOpcionesTest() {
     const goInstructions = () => {
         localStorage.setItem('seccion', test.nombre_seccion);
         localStorage.setItem('informacion', test.informacion);
-        router.push(`/instrucciones`).then(r => console.log(r));
+        router.push(`/instrucciones`).then(r => r);
         shutUp();
     }
     const goBack = () => {
-        router.push(`/select/selectNinio`).then(r => console.log(r));
+        router.push(`/select/selectNinio`).then(r => r);
         shutUp();
     }
     const goTest = () => {
@@ -87,43 +90,43 @@ export default function MenuOpcionesTest() {
         localStorage.setItem('nombre_test', test.nombre_test);
         switch (test.nombre_seccion) {
             case "Información":
-                router.push(`/read/preguntas/readPreguntaInformacion`).then(r => console.log(r));
+                router.push(`/read/preguntas/readPreguntaInformacion`).then(r => r);
                 shutUp();
                 break;
             case "Semejanzas":
-                router.push(`/read/preguntas/readPreguntaSemejanzas`).then(r => console.log(r));
+                router.push(`/read/preguntas/readPreguntaSemejanzas`).then(r => r);
                 shutUp();
                 break;
             case "Vocabulario":
-                router.push(`/read/preguntas/readPreguntaVocabulario`).then(r => console.log(r));
+                router.push(`/read/preguntas/readPreguntaVocabulario`).then(r => r);
                 shutUp();
                 break;
             case "Comprensión":
-                router.push(`/read/preguntas/readPreguntaComprension`).then(r => console.log(r));
+                router.push(`/read/preguntas/readPreguntaComprension`).then(r => r);
                 shutUp();
                 break;
             case "Dibujos":
-                router.push(`/read/preguntas/readPreguntaDibujos`).then(r => console.log(r));
+                router.push(`/read/preguntas/readPreguntaDibujos`).then(r => r);
                 shutUp();
                 break;
             case "Nombres":
-                router.push(`/read/preguntas/readPreguntaNombres`).then(r => console.log(r));
+                router.push(`/read/preguntas/readPreguntaNombres`).then(r => r);
                 shutUp();
                 break;
             case "Matrices":
-                router.push(`/read/preguntas/readPreguntaMatrices`).then(r => console.log(r));
+                router.push(`/read/preguntas/readPreguntaMatrices`).then(r => r);
                 shutUp();
                 break;
             case "Conceptos":
-                router.push(`/read/preguntas/readPreguntaConceptos`).then(r => console.log(r));
+                router.push(`/read/preguntas/readPreguntaConceptos`).then(r => r);
                 shutUp();
                 break;
             case "Reconocimiento":
-                router.push(`/read/preguntas/readPreguntaReconocimiento`).then(r => console.log(r));
+                router.push(`/read/preguntas/readPreguntaReconocimiento`).then(r => r);
                 shutUp();
                 break;
             case "Búsqueda":
-                router.push(`/read/preguntas/readPreguntaBusqueda`).then(r => console.log(r));
+                router.push(`/read/preguntas/readPreguntaBusqueda`).then(r => r);
                 shutUp();
                 break;
         }
@@ -187,7 +190,7 @@ export default function MenuOpcionesTest() {
         })
     }
     const confirmGetBack = () => {
-        router.push('/select/selectNinio').then(r => console.log(r));
+        router.push('/select/selectNinio').then(r => r);
         shutUp();
     }
     useVoiceReader(text, isSpeaking);

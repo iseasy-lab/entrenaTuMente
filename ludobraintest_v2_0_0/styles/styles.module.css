@@ -192,21 +192,23 @@
     }
 
     .epn_logo {
-        height: 10vw;
+        height: 8vw;
         width: auto;
     }
 
     .ludolab_logo {
-        height: 10vw;
+        height: 8vw;
         width: auto;
     }
 
     .user_logo {
-        width: 4.5vw;
+        width: 4vw;
+        height: auto;
     }
 
     .password_logo {
-        width: 4.5vw;
+        width: 4vw;
+        height: auto;
     }
 
     .echo_logo {
@@ -231,11 +233,11 @@
     }
 
     .label {
-        font-size: 1.8vw;
+        font-size: 1.5vw;
     }
 
     .input_text {
-        font-size: 1.6vw;
+        font-size: 1.3vw;
     }
 
     .btn_text {

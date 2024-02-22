@@ -34,10 +34,10 @@ export default function SelectSeccionPregunta(){
         })
     }
     const confirmGetBack = () => {
-        router.push('/read/readPregunta').then((r) => console.log("Sección de preguntas"));
+        router.push('/read/readPregunta').then((r) => r);
     }
     const goHome = () => {
-        router.push('/modulos').then((r) => console.log("Inicio"));
+        router.push('/modulos').then((r) => r);
     }
     const voidFunction = () => {
         console.log("Cerrando Sesión");

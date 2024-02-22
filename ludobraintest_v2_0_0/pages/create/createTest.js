@@ -10,9 +10,12 @@ import Button from "@/components/Button";
 import Swal from "sweetalert2";
 import UseSpeechSynthesis from "@/effects/useSpeechSynthesis";
 import useVoiceReader from "@/effects/useVoiceReader";
+import configurationServices from "@/public/config/configurationServices";
+import configurationPort from "@/public/config/configurationPort";
 
 export default function CreateTest() {
     const router = useRouter();
+    const basePath = configurationServices.url + configurationPort.port;
     let section;
     const {speak, speaking} = UseSpeechSynthesis();
     /*------------------- ESTADOS -------------------*/
@@ -45,7 +48,7 @@ export default function CreateTest() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getSections"
+            url: basePath + "/getSections"
         }).then((res) => {
             setSecciones(res.data);
         }).catch((err) => {
@@ -62,7 +65,7 @@ export default function CreateTest() {
             data: {
                 seccion: section
             },
-            url: "http://poliquizzes.com:3001/getPreguntasBySeccion",
+            url: basePath + "/getPreguntasBySeccion",
         }).then((res) => {
             setPreguntas(res.data);
         }).catch((err) => {
@@ -142,7 +145,7 @@ export default function CreateTest() {
                     seccion: seccion,
                     preguntas: newPreguntas
                 },
-                url: "http://poliquizzes.com:3001/createTest",
+                url: basePath + "/createTest",
             }).then((res) => {
                 console.log(res);
                 if (res.data.message === "Test creado correctamente") {

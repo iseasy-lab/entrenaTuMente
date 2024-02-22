@@ -75,7 +75,7 @@ export default function Instrucciones() {
         }
     }
     const goBack = () => {
-        router.push(`/menuOpcionesTest`).then(r => console.log(r));
+        router.push(`/menuOpcionesTest`).then(r => r);
         shutUp();
     }
     const hearVoice = () => {

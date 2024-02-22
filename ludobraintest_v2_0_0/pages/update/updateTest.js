@@ -8,9 +8,12 @@ import axios from "axios";
 import button from "@/styles/button.module.css";
 import Swal from "sweetalert2";
 import Button from "@/components/Button";
+import configurationServices from "@/public/config/configurationServices";
+import configurationPort from "@/public/config/configurationPort";
 
 export default function UpdateTest() {
     const router = useRouter();
+    const basePath = configurationServices.url + configurationPort.port;
     let section;
     let information;
     /*------------------- ESTADOS -------------------*/
@@ -50,7 +53,7 @@ export default function UpdateTest() {
                 id_test: information,
             },
             withCredentials: true,
-            url: 'http://poliquizzes.com:3001/getTestNameById',
+            url: basePath + '/getTestNameById',
         }).then(res => {
             console.log("Nombre del test", res.data);
             setNombreTest(res.data[0].nombre_test);
@@ -68,7 +71,7 @@ export default function UpdateTest() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getSections"
+            url: basePath + '/getSections',
         }).then((res) => {
             setSecciones(res.data);
         }).catch((err) => {
@@ -82,7 +85,7 @@ export default function UpdateTest() {
             data: {
                 id_test: information
             },
-            url: "http://poliquizzes.com:3001/getCurrentInformation",
+            url: basePath + '/getCurrentInformation',
         }).then((res) => {
             setNombreActual(res.data[0].nombre_test);
             setSeccionActual(res.data[0].nombre_seccion);
@@ -99,7 +102,7 @@ export default function UpdateTest() {
             data: {
                 id_test: information
             },
-            url: "http://poliquizzes.com:3001/getPreguntasByIdTest"
+            url: basePath + '/getPreguntasByIdTest'
         }).then((res) => {
             setOldPreguntas(res.data);
             setNewPreguntas(res.data);
@@ -117,7 +120,7 @@ export default function UpdateTest() {
             data: {
                 seccion: section
             },
-            url: "http://poliquizzes.com:3001/getPreguntasBySeccion",
+            url: basePath + "/getPreguntasBySeccion",
         }).then((res) => {
             setPreguntas(res.data);
         }).catch((err) => {
@@ -199,7 +202,7 @@ export default function UpdateTest() {
                     viejasPreguntas: oldPreguntas,
                     nuevasPreguntas: newPreguntas
                 },
-                url: "http://poliquizzes.com:3001/updateTest",
+                url: basePath + "/updateTest",
             }).then((res) => {
                 console.log(res);
                 if (res.data.message === "Test actualizado correctamente") {

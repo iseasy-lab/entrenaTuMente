@@ -8,9 +8,12 @@ import {useRouter} from "next/router";
 import Button from "@/components/Button";
 import button from "@/styles/button.module.css";
 import Swal from "sweetalert2";
+import configurationServices from "@/public/config/configurationServices";
+import configurationPort from "@/public/config/configurationPort";
 
 export default function CreateNinio() {
     const router = useRouter();
+    const basePath = configurationServices.url + configurationPort.port;
     /*------------------- ESTADOS -------------------*/
     const [registerName, setRegisterName] = useState('');
     const [registerAge, setRegisterAge] = useState('');
@@ -25,7 +28,7 @@ export default function CreateNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getUser"
+            url: basePath + "/getUser"
         }).then(res => {
             setRegisterEducatorId(res.data.id);
         }).catch(err => {
@@ -80,7 +83,7 @@ export default function CreateNinio() {
                     edad: registerAge,
                 },
                 withCredentials: true,
-                url: "http://poliquizzes.com:3001/crearNinio"
+                url: basePath + "/crearNinio"
             }).then((res) => {
                 console.log(res);
                 if (res.data.message === 'Niño creado correctamente') {

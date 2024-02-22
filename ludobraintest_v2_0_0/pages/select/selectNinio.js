@@ -11,9 +11,12 @@ import Swal from 'sweetalert2'
 import SweetAlert from "sweetalert2";
 import UseSpeechSynthesis from "@/effects/useSpeechSynthesis";
 import useVoiceReader from "@/effects/useVoiceReader";
+import configurationServices from "@/public/config/configurationServices";
+import configurationPort from "@/public/config/configurationPort";
 
 export default function SelectNinio() {
     const router = useRouter();
+    const basePath = configurationServices.url + configurationPort.port;
     const {speak, speaking} = UseSpeechSynthesis();
     let section;
     const text = "¡Bienvenido al módulo de Evaluación! En la parte izquierda de la pantalla, selecciona al niño que realizará la evaluación. " +
@@ -62,7 +65,7 @@ export default function SelectNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getChildren"
+            url: basePath + "/getChildren"
         }).then((res) => {
             if (res.data) {
                 setChildren(res.data); // Establece el estado con los resultados
@@ -77,7 +80,7 @@ export default function SelectNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getSections"
+            url: basePath + "/getSections"
         }).then((res) => {
             setSections(res.data);
         }).catch((err) => {
@@ -88,7 +91,7 @@ export default function SelectNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getInformacionTests"
+            url: basePath + "/getInformacionTests"
         }).then((res) => {
             setInformacionTests(res.data);
             if (res.data.length !== 0) {
@@ -102,7 +105,7 @@ export default function SelectNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getSemejanzasTests"
+            url: basePath + "/getSemejanzasTests"
         }).then((res) => {
             setSemejanzasTests(res.data);
             if (res.data.length !== 0) {
@@ -116,7 +119,7 @@ export default function SelectNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getVocabularioTests"
+            url: basePath + "/getVocabularioTests"
         }).then((res) => {
             setVocabularioTests(res.data);
             if (res.data.length !== 0) {
@@ -130,7 +133,7 @@ export default function SelectNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getComprensionTests"
+            url: basePath + "/getComprensionTests"
         }).then((res) => {
             setComprensionTests(res.data);
             if (res.data.length !== 0) {
@@ -144,7 +147,7 @@ export default function SelectNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getDibujosTests"
+            url: basePath + "/getDibujosTests"
         }).then((res) => {
             setDibujosTests(res.data);
             if (res.data.length !== 0) {
@@ -158,7 +161,7 @@ export default function SelectNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getNombresTests"
+            url: basePath + "/getNombresTests"
         }).then((res) => {
             setNombresTests(res.data);
             if (res.data.length !== 0) {
@@ -172,7 +175,7 @@ export default function SelectNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getMatricesTests"
+            url: basePath + "/getMatricesTests"
         }).then((res) => {
             setMatricesTests(res.data);
             if (res.data.length !== 0) {
@@ -186,7 +189,7 @@ export default function SelectNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getConceptosTests"
+            url: basePath + "/getConceptosTests"
         }).then((res) => {
             setConceptosTests(res.data);
             if (res.data.length !== 0) {
@@ -200,7 +203,7 @@ export default function SelectNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getReconocimientoTests"
+            url: basePath + "/getReconocimientoTests"
         }).then((res) => {
             setReconocimientoTests(res.data);
             if (res.data.length !== 0) {
@@ -214,7 +217,7 @@ export default function SelectNinio() {
         axios({
             method: "get",
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getBusquedaTests"
+            url: basePath + "/getBusquedaTests"
         }).then((res) => {
             setBusquedaTests(res.data);
             if (res.data.length !== 0) {
@@ -359,12 +362,12 @@ export default function SelectNinio() {
                 id_test: testSelected
             },
             withCredentials: true,
-            url: "http://poliquizzes.com:3001/getTestSession"
+            url: basePath + "/getTestSession"
         }).then((res) => {
             localStorage.setItem('id_t_n', res.data[0].id_t_n);
             localStorage.setItem('id_test', testSelected);
             localStorage.setItem('id_ninio', childSelected);
-            router.push(`/menuOpcionesTest`).then(r => console.log(r));
+            router.push(`/menuOpcionesTest`).then(r => r);
             shutUp();
         }).catch((err) => {
             console.log(err);
@@ -408,7 +411,7 @@ export default function SelectNinio() {
             axios({
                 method: "post",
                 withCredentials: true,
-                url: "http://poliquizzes.com:3001/startTest",
+                url: basePath + "/startTest",
                 data: {
                     id_ninio: childSelected,
                     id_test: testSelected
@@ -457,7 +460,7 @@ export default function SelectNinio() {
         })
     }
     const confirmGetBack = () => {
-        router.push('/modulos').then(r => console.log(r));
+        router.push('/modulos').then(r => r);
         shutUp();
     }
     const hearVoice = () => {
